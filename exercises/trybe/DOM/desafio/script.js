@@ -4,7 +4,6 @@
 
 // Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
 const title = document.createElement('h1');
-title.className = 'title'
 title.innerText = 'TrybeTrip - Agência de Viagens';
 
 const body = document.body;
@@ -58,6 +57,27 @@ for (let index = 0; index < 3; index++) {
     const h3 = document.createElement('h3');
     main.appendChild(h3);
 }
-console.log(anotherOtherSection.firstChild);
-console.log(main.children);
 
+//Bônus
+
+// Adicione a classe title na tag h1 criada;
+title.className = 'title'
+
+// Adicione a classe description nas 3 tags h3 criadas;
+main.lastChild.className = 'description';
+main.lastChild.previousSibling.className = 'description';
+main.lastChild.previousSibling.previousSibling.className = 'description';
+
+// Remova a section criada no passo 5 (aquela que possui a classe left-content) por meio da função .removeChild();
+main.removeChild(anotherSection);
+
+// Centralize a section criada no passo 6 (aquela que possui a classe right-content).
+anotherOtherSection.style.marginRight = 'auto';
+
+// Troque a cor de fundo do elemento-pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+main.style.backgroundColor = 'green';
+
+// Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+uList.removeChild(uList.lastChild);
+uList.removeChild(uList.lastChild);
+console.log(uList.children);
