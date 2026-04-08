@@ -4,9 +4,10 @@
 
 // Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
 const title = document.createElement('h1');
+title.className = 'title'
 title.innerText = 'TrybeTrip - Agência de Viagens';
 
-const body = document.createElement('body')
+const body = document.body;
 body.appendChild(title);
 
 
@@ -22,6 +23,7 @@ main.appendChild(section);
 
 // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
 const paragraph = document.createElement('p');
+paragraph.className = 'description';
 paragraph.innerText = 'some text here';
 section.appendChild(paragraph)
 
