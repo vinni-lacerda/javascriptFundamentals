@@ -29,9 +29,15 @@ input.addEventListener("input", (event) => {
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy',
 // redirecione para alguma página.
 // 4.1. Que tal redirecionar para seu portfólio? Dica: Lembre-se dos métodos `window.location.replace` e `window.open`.
+myWebpage.addEventListener("dblclick", () =>{
+    window.location.replace("https://github.com/vinni-lacerda")
+})
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo.
+myWebpage.addEventListener('mouseover', () => {
+    myWebpage.style.color = 'blue';
+})
 
 // Segue abaixo um exemplo de uso do event.target.
 
@@ -47,4 +53,3 @@ firstLi.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na função retornará o objeto 'firstLi'.
-console.log('test');
